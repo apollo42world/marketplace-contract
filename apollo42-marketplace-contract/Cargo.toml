@@ -1,0 +1,12 @@
+[package]
+name = "apollo42-marketplace-contract"
+version = "1.0.0"
+authors = ["ClockRide <clockride@apollo42.world>"]
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+near-sdk = "4.0.0-pre.3"
+near-contract-standards = "4.0.0-pre.3"

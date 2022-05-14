@@ -1,0 +1,24 @@
+[package]
+name = "apollo42-marketplace-contract-wrapper"
+version = "1.0.0"
+authors = ["ClockRide <clockride@apollo42.world>"]
+edition = "2021"
+
+[dev-dependencies]
+near-sdk = "4.0.0-pre.3"
+near-contract-standards = "4.0.0-pre.3"
+near-sdk-sim = "4.0.0-pre.3"
+apollo42-marketplace-contract = { path = "./apollo42-marketplace-contract" }
+
+[profile.release]
+codegen-units = 1
+opt-level = "z"
+lto = true
+debug = false
+panic = "abort"
+overflow-checks = true
+
+[workspace]
+members = [
+    "apollo42-marketplace-contract",
+]
